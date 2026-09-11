@@ -24,7 +24,7 @@ gate = r'''<!doctype html>
   h1 em{font-style:italic;color:#F5DFA3}
   p{color:#B9C2E6;font-size:14px;margin:0 0 22px}
   form{display:flex;gap:8px;justify-content:center}
-  input{flex:1;max-width:240px;border:1px solid rgba(185,194,230,.25);background:rgba(14,20,52,.7);color:#EEF1FF;font:inherit;font-size:15px;padding:11px 14px;border-radius:999px;outline:none;text-align:center;letter-spacing:.08em}
+  input{flex:1;max-width:240px;border:1px solid rgba(185,194,230,.25);background:rgba(14,20,52,.7);color:#EEF1FF;font:inherit;font-size:16px;padding:11px 14px;border-radius:999px;outline:none;text-align:center;letter-spacing:.08em}
   input:focus{border-color:#F5DFA3}
   button{border:0;background:#F5DFA3;color:#1A1400;font:inherit;font-weight:800;font-size:14px;padding:11px 18px;border-radius:999px;cursor:pointer}
   button:disabled{opacity:.6;cursor:wait}
