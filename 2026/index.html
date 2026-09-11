@@ -32,7 +32,7 @@
   const c = document.getElementById("s"), x = c.getContext("2d"); let W, H; const st = Array.from({length: 160}, () => ({x: Math.random(), y: Math.random(), r: Math.random()*1.2+.3, p: Math.random()*6.28}));
   const rs = () => { W = c.width = innerWidth; H = c.height = innerHeight; }; rs(); addEventListener("resize", rs); let t = 0;
   (function d(){ t += .016; x.clearRect(0,0,W,H); st.forEach(s => { x.globalAlpha = .3 + .4*(.5+.5*Math.sin(t+s.p)); x.fillStyle = "#DDE4FF"; x.beginPath(); x.arc(s.x*W, s.y*H, s.r, 0, 6.28); x.fill(); }); requestAnimationFrame(d); })();
-  const SALT = "yjVwfLbEu87DTy5JvmLjVg==", IV = "6AvHWLvkfm2cCJ/2", BIN = "sky-5215e821da.bin";
+  const SALT = "vKBoTiC1ijKOqUx8WcdebQ==", IV = "gqEblypdNJeieBLI", BIN = "sky-045eb59716.bin";
   const b = s => Uint8Array.from(atob(s), ch => ch.charCodeAt(0));
   // Start downloading the encrypted sky right away, with progress, so it's ready by the time the passcode is typed.
   const m0 = document.getElementById("m");
