@@ -17,6 +17,14 @@ The UW–Madison MSTP retreat yearbook, as a night sky. Live at https://mstp-con
    at your registrar (either point nameservers at Netlify, or add the A/CNAME records it shows).
    HTTPS is automatic once DNS resolves.
 
+## Passcode
+
+`2026/index.html` is a small gate page; the real yearbook inside it is AES-256 encrypted with the program passcode,
+so the content is unreadable without it (not just hidden). Visitors enter it once per browser tab session.
+
+To change the passcode or re-lock a new version: `python3 tools/lock.py "<passcode>" unlocked.html 2026/index.html`
+(needs `pip install cryptography`). Keep the unlocked source out of the repo.
+
 ## Updating the yearbook
 
 Replace `2026/index.html` with the new version, commit, push. Netlify redeploys in about a minute.
