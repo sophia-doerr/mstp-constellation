@@ -53,6 +53,7 @@ gate = r'''<!doctype html>
     document.open(); document.write(html); document.close();
   }
   const f = document.getElementById("f"), p = document.getElementById("p"), m = document.getElementById("m"), bt = document.getElementById("b");
+  if (!(window.crypto && crypto.subtle)) { m.innerHTML = 'This page needs a secure connection. <a href="https://' + location.host + location.pathname + '" style="color:#F5DFA3">Open the https:// version</a>.'; bt.disabled = true; }
   f.addEventListener("submit", async e => { e.preventDefault(); bt.disabled = true; m.textContent = "Opening the sky…"; try { await open(p.value); } catch (err) { m.textContent = "That's not it — check the email and try again."; bt.disabled = false; p.select(); } });
   try { const saved = sessionStorage.getItem("mstp-pass"); if (saved) { m.textContent = "Opening the sky…"; await open(saved); } } catch (e) { m.textContent = ""; }
 })();
