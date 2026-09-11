@@ -19,10 +19,11 @@ The UW–Madison MSTP retreat yearbook, as a night sky. Live at https://mstp-con
 
 ## Passcode
 
-`2026/index.html` is a small gate page; the real yearbook inside it is AES-256 encrypted with the program passcode,
-so the content is unreadable without it (not just hidden). Visitors enter it once per browser tab session.
+`2026/index.html` is a tiny gate page. The real yearbook lives beside it as `2026/sky-<hash>.bin`, AES-256 encrypted with the
+program passcode, so the content is unreadable without it (not just hidden). The gate starts downloading the payload immediately
+with a progress indicator, then decrypts it when the passcode is entered. Visitors enter it once per browser tab session.
 
-To change the passcode or re-lock a new version: `python3 tools/lock.py "<passcode>" unlocked.html 2026/index.html`
+To change the passcode or re-lock a new version: `python3 tools/lock.py "<passcode>" unlocked.html 2026/index.html` (writes the gate and a new `sky-<hash>.bin`, removing the old one)
 (needs `pip install cryptography`). Keep the unlocked source out of the repo.
 
 ## Updating the yearbook
