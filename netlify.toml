@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+# Root always points at the current year. Next year: add a 2027/ folder and change this one line.
+[[redirects]]
+  from = "/"
+  to = "/2026/"
+  status = 302
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
